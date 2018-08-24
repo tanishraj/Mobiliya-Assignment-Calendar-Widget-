@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Calender Widget</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+	 crossorigin="anonymous"/>
+	<link href="assets/style.css" rel="stylesheet">
+	<style>
+		
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1><span class="fas fa-calendar-alt"></span> Calender Widget</h1>
+
+		<div id="calender">
+			<div class="vcal-header">
+				<button class="vcal-btn" data-calendar-toggle="previous">
+					<span class="fas fa-arrow-left"></span>
+				</button>
+
+				<div class="vcal-header__label" data-calendar-label="month">
+					March 2017
+				</div>
+
+				<button class="vcal-btn" data-calendar-toggle="next">
+					<span class="fas fa-arrow-right"></span>
+				</button>
+			</div>
+			<div class="calendar-week">
+				<span>Mon</span>
+				<span>Tue</span>
+				<span>Wed</span>
+				<span>Thu</span>
+				<span>Fri</span>
+				<span>Sat</span>
+				<span>Sun</span>
+			</div>
+			<ul class="calendar-body" data-calendar-area="month"></ul>
+		</div>
+
+		<p class="demo-picked">
+			Your selected date is: 
+			<span data-calendar-label="picked"></span>
+		</p>
+	</div>
+	<script src="assets/script.js" type="text/javascript"></script>
+	<script>
+		window.addEventListener('load', function () {
+			vanillaCalendar.init({
+				disablePastDays: false
+			});
+		})
+	</script>
+</body>
+
+</html>
